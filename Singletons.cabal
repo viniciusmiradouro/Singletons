@@ -1,0 +1,97 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           Singletons
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/Singletons#readme>
+homepage:       https://github.com/githubuser/Singletons#readme
+bug-reports:    https://github.com/githubuser/Singletons/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2023 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/Singletons
+
+library
+  exposed-modules:
+      Singletons
+  other-modules:
+      Paths_Singletons
+  hs-source-dirs:
+      src
+  default-extensions:
+      DataKinds
+      GADTs
+      LambdaCase
+      TemplateHaskell
+      TypeFamilies
+      TypeInType
+      TypeOperators
+      UndecidableInstances
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -fwarn-incomplete-patterns
+  build-depends:
+      base >=4.7 && <5
+    , singletons
+    , singletons-base
+    , singletons-th
+  default-language: GHC2021
+
+executable Singletons-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Singletons
+  hs-source-dirs:
+      app
+  default-extensions:
+      DataKinds
+      GADTs
+      LambdaCase
+      TemplateHaskell
+      TypeFamilies
+      TypeInType
+      TypeOperators
+      UndecidableInstances
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -fwarn-incomplete-patterns -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Singletons
+    , base >=4.7 && <5
+    , singletons
+    , singletons-base
+    , singletons-th
+  default-language: GHC2021
+
+test-suite Singletons-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_Singletons
+  hs-source-dirs:
+      test
+  default-extensions:
+      DataKinds
+      GADTs
+      LambdaCase
+      TemplateHaskell
+      TypeFamilies
+      TypeInType
+      TypeOperators
+      UndecidableInstances
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -fwarn-incomplete-patterns -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Singletons
+    , base >=4.7 && <5
+    , singletons
+    , singletons-base
+    , singletons-th
+  default-language: GHC2021
